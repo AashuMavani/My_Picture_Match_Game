@@ -16,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.my_picture_match_game.Activity.Level_Board_Activity;
 import com.example.my_picture_match_game.Activity.Level_Display_Activity;
@@ -32,6 +31,7 @@ public class Level_Display_Adapter extends BaseAdapter {
     List arrayList;
     TextView timeshow;
     ProgressBar progressBar;
+    int levelno;
     int click = 1, pos1, pos2,win=0;
     View mask2;
     int intervel;
@@ -40,12 +40,13 @@ public class Level_Display_Adapter extends BaseAdapter {
     private long delytime=40000;
     private int maxtime=40;
 
-    public Level_Display_Adapter(Level_Display_Activity level_display_activity, List arrayList, TextView timeshow, ProgressBar progressBar, String level) {
+    public Level_Display_Adapter(Level_Display_Activity level_display_activity, List arrayList, TextView timeshow, ProgressBar progressBar, String level, int levelno) {
         this.level_display_activity = level_display_activity;
         this.arrayList = arrayList;
         this.timeshow = timeshow;
         this.progressBar = progressBar;
         this.level=level;
+        this.levelno=levelno;
     }
 
     @Override
@@ -234,8 +235,8 @@ public class Level_Display_Adapter extends BaseAdapter {
                            ///Toast.makeText(level_display_activity, "win", Toast.LENGTH_SHORT).show();
                             Log.d("TTT", "playgame: time="+(progressBar.getMax()-intervel));
                             int second= (int) (delytime=(progressBar.getMax()-intervel));
-                            editor.putInt("wintime",second);
-                            editor.putInt("levelno",position);
+                            editor.putInt("wintime"+levelno,second);
+                            //System.out.println("wintime"+second);
                             editor.commit();
 
                             MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(level_display_activity);

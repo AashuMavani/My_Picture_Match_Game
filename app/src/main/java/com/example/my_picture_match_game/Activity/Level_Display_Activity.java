@@ -54,8 +54,10 @@ public class Level_Display_Activity extends AppCompatActivity {
 
 
        level=getIntent().getStringExtra("level");
+
         Log.d("AAA", "onCreate: level"+level);
         leveltype1.setText(level);
+        int levelno = getIntent().getIntExtra("levelno", 1);
 
         MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(Level_Display_Activity.this);
 
@@ -63,7 +65,7 @@ public class Level_Display_Activity extends AppCompatActivity {
         builder.setPositiveButton("GO", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                int levelno = getIntent().getIntExtra("levelno", 1);
+
 
                 String[] images = new String[0];
                 try {
@@ -99,7 +101,7 @@ public class Level_Display_Activity extends AppCompatActivity {
                 arrayList.addAll(arrayList);
 
                 Collections.shuffle(arrayList);
-                Level_Display_Adapter adapter = new Level_Display_Adapter(Level_Display_Activity.this, arrayList,timeshow,progressBar,level);
+                Level_Display_Adapter adapter = new Level_Display_Adapter(Level_Display_Activity.this, arrayList,timeshow,progressBar,level,levelno);
                 level_gridview.setNumColumns(column);
                 level_gridview.setAdapter(adapter);
                 dialog.dismiss();

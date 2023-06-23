@@ -2,6 +2,7 @@ package com.example.my_picture_match_game.Adapter;
 
 import static com.example.my_picture_match_game.Activity.MainActivity.preferences;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,9 +44,14 @@ public class Listview_Adapter extends BaseAdapter {
          view= LayoutInflater.from(level_board_activity).inflate(R.layout.listview_item,parent,false);
         TextView textView=view.findViewById(R.id.listview_item);
 
-        int wintime=preferences.getInt("wintime",0);
-        int levelno1=preferences.getInt("levelno",1);
-        textView.setText(levelno[position]+"-"+second+"s");
+        int wintime=preferences.getInt("wintime"+(position+1),0);
+
+        System.out.println("LevelNo="+position);
+        System.out.println("wintime="+wintime);
+
+//        int levelno1=preferences.getInt("levelno",1);
+
+        textView.setText(levelno[position]+"-"+wintime);
 
         return view;
     }
