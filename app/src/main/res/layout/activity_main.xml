@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:background="#009688">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Select Mode"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+           android:layout_marginTop="30dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:layout_weight="3"
+            android:src="@drawable/baseline_volume_up_24"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:layout_weight="3"
+            android:src="@drawable/baseline_more_vert_24"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/fondo_imagenes">
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="90dp"
+            android:orientation="vertical"
+            android:background="@drawable/border">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/no_time_limit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box"
+                   android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="NO TIME LIMIT"
+                    android:gravity="center"
+                    android:textStyle="italic"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:id="@+id/normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="NORMAL"
+                    android:gravity="center"
+                    android:textStyle="italic"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:id="@+id/hard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="HARD"
+                    android:gravity="center"
+                    android:textStyle="italic"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginVertical="30dp"
+            android:background="@drawable/border">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/box"
+                android:layout_margin="20dp"
+                android:text="REMOVE ADS"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="30dp"
+            android:background="@drawable/border">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/box"
+                android:layout_margin="15dp"
+                android:text="SHARE"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/box"
+                android:layout_margin="15dp"
+                android:text="MORE GAMES"
+                android:padding="3dp"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</LinearLayout>
